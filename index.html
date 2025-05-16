@@ -12,9 +12,11 @@
     <nav>
       <a href="#">Home</a>
       <a href="#">Menu</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
+       <a href="#gallery">Gallery</a>
+       <a href="#contact">Contact</a>
+	  <a href="#about">About</a>
     </nav>
+	
   </header>
 
   <section class="hero">
@@ -23,12 +25,12 @@
     <a href="#contact" class="btn">Request a Quote</a>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <h2>About Us</h2>
     <p>At Ajit Catering, we bring flavor and flair to every event. Whether it's a cozy backyard wedding or a lavish corporate banquet, our team ensures every bite is unforgettable.</p>
   </section>
 
-  <section class="gallery">
+  <section id="gallery" class="gallery">
     <h2>Our Food</h2>
     <div class="images">
       <img src="images/food1.jpg" alt="Appetizer">
@@ -50,5 +52,24 @@
   <footer>
     <p>© 2025 Ajit Catering. All rights reserved.</p>
   </footer>
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navbar");
+    nav.classList.toggle("active");
+  }
+</script>
+
+
 </body>
 </html>

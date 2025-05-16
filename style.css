@@ -13,7 +13,11 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+  
 
 nav a {
   color: white;
@@ -69,3 +73,71 @@ footer {
   padding: 20px;
   text-align: center;
 }
+/* Step 1: Hover Effects */
+.hero .btn:hover {
+  background-color: #8B0000;
+  color: white;
+  transition: 0.3s;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Shadow when scrolling */
+header.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}html {
+  scroll-behavior: smooth;
+}
+/* Navigation styles */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #8B0000;
+  padding: 20px;
+  color: white;
+}
+
+.menu-toggle {
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+#navbar {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #navbar.active {
+    display: flex;
+  }
+
+  #navbar a {
+    background-color: #a52a2a;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+}
+
